@@ -1,0 +1,135 @@
+/* ===== TARJETA ===== */
+.table-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+/* ===== TABLA ===== */
+.tabla-solicitudes {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto; /* 🔑 evita desalineaciones */
+  font-size: 14px;
+}
+
+
+
+/* ===== HEADER ===== */
+.tabla-solicitudes thead {
+  background: #f3f4f6;
+}
+
+.tabla-solicitudes thead tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabla-solicitudes th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+}
+
+/* ===== CELDAS ===== */
+.tabla-solicitudes td {
+  padding: 12px;
+  vertical-align: middle;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ===== LÍNEAS PERFECTAS ENTRE FILAS ===== */
+.tabla-solicitudes tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabla-solicitudes tbody tr:last-child {
+  border-bottom: none;
+}
+
+.tabla-solicitudes tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* ===== TABLA VACÍA ===== */
+.tabla-vacia {
+  text-align: center;
+  padding: 20px;
+  color: #9ca3af;
+}
+
+/* ===== ESTADOS ===== */
+.estado {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.estado.pendiente {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.estado.aprobada {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.estado.rechazada {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ===== ACCIONES ===== */
+.acciones {
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ===== LINK ACCIÓN ===== */
+.accion-link {
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #16a34a;
+}
+
+.accion-link:hover {
+  color: #15803d;
+  text-decoration: underline;
+}
+
+/* ===== TEXTO CORTADO (JUSTIFICACIÓN, OBSERVACIÓN, ETC) ===== */
+.texto-corto {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 🔑 número de líneas */
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+/* TEXTO EXPANDIDO */
+.texto-corto.expandido {
+  -webkit-line-clamp: unset;
+}
+
+/* ===== VER MÁS / VER MENOS ===== */
+.ver-mas {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2563eb;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.ver-mas:hover {
+  text-decoration: underline;
+}

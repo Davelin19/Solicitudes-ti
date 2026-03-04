@@ -1,0 +1,145 @@
+/* ===================================
+   VER SOLICITUD - COMPACTO PRO
+   =================================== */
+
+.ver-solicitud-container {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  background: #f4f6f9;
+  min-height: auto; /* 🔥 quitamos 100vh */
+}
+
+/* ================= CARD ================= */
+
+.ver-solicitud-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 950px; /* 🔥 un poco más compacto */
+  border-radius: 12px;
+  padding: 35px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+/* ================= TÍTULO ================= */
+
+.ver-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 12px;
+}
+
+/* ================= GRID ================= */
+
+.ver-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.ver-grid div {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.ver-grid div span {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #9ca3af;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.ver-grid div p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* ================= SECCIONES ================= */
+
+.ver-section {
+  margin-bottom: 25px;
+}
+
+.ver-section span {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #9ca3af;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.ver-section p {
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 8px;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  margin: 0;
+}
+
+/* ================= BADGE ================= */
+
+.estado {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Estados */
+
+.estado.aprobada,
+.estado.aprobado {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.estado.pendiente {
+  background: #fffbeb;
+  color: #b45309;
+}
+
+.estado.rechazada,
+.estado.rechazado {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+/* ================= BOTÓN ================= */
+
+.ver-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-volver {
+  padding: 9px 18px;
+  border-radius: 6px;
+  border: none;
+  background: #111827;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-volver:hover {
+  background: #374151;
+}

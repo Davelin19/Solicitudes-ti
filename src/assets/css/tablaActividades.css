@@ -1,0 +1,354 @@
+/* ========================= */
+/* CARD CONTENEDOR */
+/* ========================= */
+.table-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ========================= */
+/* TABLA BASE */
+/* ========================= */
+.tabla-actividades {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.tabla-actividades thead {
+  background: #f8fafc;
+}
+
+.tabla-actividades th {
+  padding: 18px;
+  font-weight: 600;
+  color: #64748b;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tabla-actividades td.acciones {
+  padding: 18px;
+  color: #1e293b;
+  border: none;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+
+
+/* Hover elegante */
+.tabla-actividades tbody tr {
+  transition: all 0.2s ease;
+}
+
+.tabla-actividades tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* ========================= */
+/* ESTADOS MÁS MODERNOS */
+/* ========================= */
+.estado {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.estado.pendiente {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.estado.en-curso {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.estado.completado {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* ========================= */
+/* BARRA DE PROGRESO PREMIUM */
+/* ========================= */
+.avance-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 200px;
+}
+
+.progress {
+  flex: 1;
+  height: 10px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.6s ease;
+}
+
+/* Colores suaves */
+.progress-bar.rojo {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.progress-bar.amarillo {
+  background: linear-gradient(90deg, #facc15, #f59e0b);
+}
+
+.progress-bar.verde {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.avance-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  min-width: 40px;
+  text-align: center;
+}
+/* ========================= */
+/* BOTONES FORZADOS PREMIUM */
+/* ========================= */
+
+.table-card .acciones {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-card .acciones button {
+  all: unset; /* 🔥 elimina cualquier estilo externo */
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+/* INICIAR */
+.table-card .acciones button.iniciar {
+  background: #16a34a;
+  color: white;
+}
+
+.table-card .acciones button.iniciar:hover {
+  background: #15803d;
+  transform: translateY(-2px);
+}
+
+/* EDITAR */
+.table-card .acciones button.editar {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.table-card .acciones button.editar:hover {
+  background: #e2e8f0;
+}
+
+/* ELIMINAR */
+.table-card .acciones button.eliminar {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.table-card .acciones button.eliminar:hover {
+  background: #fecaca;
+}
+
+/* ========================= */
+/* PADRE / HIJA */
+/* ========================= */
+.fila-padre {
+  background: #f8fafc;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.fila-padre:hover {
+  background: #eef2ff;
+}
+
+.fila-hija {
+  background: #ffffff;
+}
+
+.hija-nombre {
+  padding-left: 35px;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* 🔥 ARREGLAR SOLO EL BOTÓN CREAR HIJA */
+.table-card .acciones .crear-hija {
+  all: unset;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.table-card .acciones .crear-hija:hover {
+  background: #ddd6fe;
+  transform: translateY(-2px);
+}
+
+/* APROBAR */
+.table-card .acciones .aprobar {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.table-card .acciones .aprobar:hover {
+  background: #bbf7d0;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+@media (max-width: 768px) {
+  .acciones {
+    flex-wrap: wrap;
+  }
+}
+
+.barra-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.barra-filtros input,
+.barra-filtros select {
+  padding: 8px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  min-width: 160px;
+}
+
+.barra-filtros input:focus,
+.barra-filtros select:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.btn-buscar {
+  padding: 8px 16px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-buscar:hover {
+  background: #4338ca;
+}
+
+.btn-limpiar {
+  padding: 8px 16px;
+  background: #e5e7eb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-limpiar:hover {
+  background: #d1d5db;
+}
+
+.btn-buscar {
+  padding: 8px 16px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  float:right;
+}
+
+.btn-buscar:hover {
+  background: #4338ca;
+}
+
+.btn-limpiar {
+  padding: 8px 16px;
+  background: #e5e7eb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.header-actividades {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  
+}
+
+
+
+.header-actividades h1 {
+  display: block;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  
+}
+
+.input-busqueda {
+  padding: 10px 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  min-width: 320px;
+  font-size: 14px;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+}
+
+.input-busqueda:focus {
+  outline: none;
+  border-color: #4f46e5;
+  background: white;
+}

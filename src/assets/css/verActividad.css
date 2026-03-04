@@ -1,0 +1,124 @@
+.ver-actividad-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.ver-actividad-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.ver-title {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #1f2937;
+}
+
+.ver-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.ver-grid div span,
+.ver-descripcion span {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ver-grid div p {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #111827;
+}
+
+.ver-descripcion {
+  margin-top: 25px;
+}
+
+.ver-descripcion p {
+  margin-top: 8px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.estado {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.estado.en-progreso {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.ver-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn-volver,
+.btn-editar {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-volver {
+  background: #e5e7eb;
+}
+
+.btn-editar {
+  background: #2563eb;
+  color: white;
+}
+
+/* Botón eliminar apoyo */
+.btn-equis {
+  /* margin-left: 50px; */
+  background-color: #fceaea;
+  border: none;
+  color: #c0392b;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  margin-right: 10px;
+}
+
+/* Hover */
+.btn-equis:hover {
+  background-color: #e74c3c;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Click */
+.btn-equis:active {
+  transform: scale(0.95);
+}
+
+.listado-apoyo {
+  display: flex;
+  justify-content: space-between;
+}

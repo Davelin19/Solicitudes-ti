@@ -1,0 +1,117 @@
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== LAYOUT GENERAL ===== */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 260px;
+  background-color: #111827;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #e5e7eb;
+  padding: 10px;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #1f2937;
+}
+
+/* ===== CONTENIDO ===== */
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* ===== TARJETAS ===== */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+  max-width: 1300px;   /* 👈 CLAVE */
+  width: 100%;
+  margin: 0 auto;  
+}
+
+/* ===== TITULOS ===== */
+.page-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.page-wrapper {
+  width: 100%;
+  max-width: 1300px;   /* 👈 controla el estiramiento */
+  margin: 0 auto;      /* centra sin forzar */
+}
+
+
+/* ===== BOTONES ===== */
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+/* ===== FORMULARIOS ===== */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}

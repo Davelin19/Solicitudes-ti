@@ -1,0 +1,144 @@
+/* SIDEBAR */
+.sidebar {
+  position: fixed;        /* 🔑 CLAVE */
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+
+  background: #0f172a;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 100;           /* para que no lo tape el contenido */
+}
+
+/* HEADER */
+.sidebar-header {
+  height: 60px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #020617;
+}
+
+
+.sidebar-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* BOTÓN */
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+/* MENU */
+.sidebar-menu {
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.menu-title {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 6px;
+}
+
+.menu-item {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #e5e7eb;
+  text-decoration: none;
+  margin-bottom: 6px;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.menu-item:hover {
+  background: #1e293b;
+}
+
+
+/* 🔥 BOTÓN FLOTANTE */
+.floating-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #020617;
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+/* ===== SUBMENÚ ===== */
+.menu-toggle {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+  font-size: 12px;
+}
+
+.arrow.open {
+  transform: rotate(90deg);
+}
+
+/* Submenu */
+.submenu {
+  margin-left: 12px;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.submenu-item {
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.submenu-item:hover {
+  background: #1e293b;
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.logout-btn {
+  color: #f87171 !important;
+  border: 1px solid #f87171;
+  margin-top: 20px;
+}
+
+.logout-btn:hover {
+  background: #f87171 !important;
+  color: #fff !important;
+}

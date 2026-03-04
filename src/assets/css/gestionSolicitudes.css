@@ -1,0 +1,482 @@
+/* ==========================================
+   RESET Y ESTILOS BASE
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ==========================================
+   CONTENEDORES PRINCIPALES
+   ========================================== */
+.gs-container {
+  padding: 24px;
+  max-width: 100%;
+}
+
+.gs-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------
+   Estilos generales de página (legacy)
+   ------------------------------------------ */
+.content {
+  padding: 32px;
+  min-height: 100vh;
+  background: #f1f5f9;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+.gs-header {
+  margin-bottom: 16px;
+}
+
+.gs-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.gs-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.page-description {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================
+   TABLA
+   ========================================== */
+.gs-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.gs-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  /* table-layout: fixed; */
+  column-width: auto;
+}
+
+/* --- Header de tabla --- */
+.gs-table thead th {
+  background: #f8fafc;
+  padding: 14px 16px;
+  font-weight: 600;
+  color: #475569;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 2px solid #cbd5e1;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+/* Header de columna de acciones - centrado */
+.gs-table thead th.gs-actions-header {
+  text-align: center;
+  width: 100px;
+}
+
+/* --- Celdas --- */
+.gs-table tbody td {
+  padding: 14px 16px;
+  vertical-align: middle;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: #334155;
+  width: auto;
+}
+
+/* Celda de acciones - centrada */
+.gs-table tbody td.gs-actions-cell {
+  text-align: center;
+  width: 120px;
+  padding: 10px;
+  vertical-align: middle;
+  /* display: flex;
+  justify-content: center; */
+}
+
+/* Contenedor de acciones - centrado perfecto */
+.gs-actions {
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Sin líneas grises entre filas */
+.gs-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.gs-table tbody tr td {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.gs-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.gs-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ==========================================
+   BADGES DE ESTADO
+   ========================================== */
+.gs-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.gs-badge.pendiente {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.gs-badge.aprobada {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.gs-badge.rechazada {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ==========================================
+   JUSTIFICACIÓN (TEXTO EXPANDIBLE)
+   ========================================== */
+.gs-justificacion {
+  max-height: 3.6em;
+  overflow: hidden;
+  line-height: 1.2;
+}
+
+.gs-justificacion.expandida {
+  max-height: none;
+}
+
+.gs-ver-mas {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.gs-ver-mas:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   OBSERVACIONES
+   ========================================== */
+.gs-observacion {
+  font-size: 12px;
+  color: #b91c1c;
+  line-height: 1.4;
+}
+
+/* ==========================================
+   BOTONES DE ACCIÓN
+   ========================================== */
+.gs-btn {
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  transition: all 0.2s ease;
+  margin: 0 10px;
+}
+
+.gs-btn:disabled {
+  background-color: #f1f5f9 !important;
+  color: #cbd5e1 !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+/* Botón aprobar */
+.gs-btn-approve {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.gs-btn-approve:hover:not(:disabled) {
+  background: #bbf7d0;
+  transform: scale(1.1);
+}
+
+/* Botón rechazar */
+.gs-btn-reject {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.gs-btn-reject:hover:not(:disabled) {
+  background: #fecaca;
+  transform: scale(1.1);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 1024px) {
+  .gs-table {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gs-card {
+    padding: 16px;
+  }
+
+  .gs-title {
+    font-size: 20px;
+  }
+}
+
+/* Capa de fondo oscura y borrosa */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Fondo oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* La ventana emergente */
+.modal-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.3s ease-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.close-x {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.user-info {
+  background: #f8fafc;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px 0 20px 0;
+  border-left: 4px solid #cbd5e1;
+}
+
+.form-group-modal {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group-modal textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  resize: none;
+  font-size: 14px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Colores Dinámicos */
+.text-approve {
+  color: #16a34a;
+}
+
+.text-reject {
+  color: #dc2626;
+}
+
+.btn-modal-approve {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-modal-reject {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-modal-cancel {
+  background: white;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-assignment-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+  background: #f1f5f9;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.form-group-modal select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: white;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.form-group-modal label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+}
+
+/* Deshabilitar botón si faltan campos */
+.btn-modal-approve:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.modal-select,
+.modal-body textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
