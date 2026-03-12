@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../assets/css/FormularioActividad.css";
+import "../assets/css/formularioActividad.css";
 
 export default function FormularioActividad() {
 
@@ -34,42 +34,42 @@ export default function FormularioActividad() {
     }));
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    const response = await fetch(
-      `${import.meta.env.VITE_API_URL}/solicitudes`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          // fecha: formulario.fecha,
-          actividad: formulario.nombre,
-          justificacion: formulario.justificacion,
-          solicitante: idapp?.id,
-        }),
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/solicitudes`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            // Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            // fecha: formulario.fecha,
+            actividad: formulario.nombre,
+            justificacion: formulario.justificacion,
+            solicitante: idapp?.id,
+          }),
+        }
+      );
+
+      const data = await response.json(); // 👈 mover esto antes
+
+      if (!response.ok) {
+        console.log("ERROR BACKEND:", data);
+        throw new Error(data.message || "Error al crear solicitud");
       }
-    );
 
-    const data = await response.json(); // 👈 mover esto antes
+      alert("Solicitud creada correctamente ✅");
+      navigate("/solicitudes");
 
-    if (!response.ok) {
-      console.log("ERROR BACKEND:", data);
-      throw new Error(data.message || "Error al crear solicitud");
+    } catch (error) {
+      console.error("ERROR COMPLETO:", error);
+      alert(error.message);
     }
-
-    alert("Solicitud creada correctamente ✅");
-    navigate("/solicitudes");
-
-  } catch (error) {
-    console.error("ERROR COMPLETO:", error);
-    alert(error.message);
-  }
-};
+  };
 
   return (
     <div className="form-container">
