@@ -35,7 +35,7 @@ const ModalAprobar = ({
                         >
                             <option value="">Seleccione un integrante...</option>
                             {equipo.map((p) => (
-                                <option key={p.id} value={p.nombre}>{p.nombre} - {p.cargo}</option>
+                                <option key={p.id} value={p.id}>{p.nombre} - {p.cargo}</option>
                             ))}
                         </select>
                     </div>
@@ -48,9 +48,9 @@ const ModalAprobar = ({
                             className="modal-select"
                         >
                             <option value="">Seleccione...</option>
-                            <option value="Alto">Alto</option>
-                            <option value="Medio">Medio</option>
-                            <option value="Bajo">Bajo</option>
+                            <option value="Alta">Alta</option>
+                            <option value="Media">Media</option>
+                            <option value="Baja">Baja</option>
                         </select>
                     </div>
 

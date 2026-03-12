@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from "react";
 import TablaActividades from "../components/TablaActividades";
 
-const API = "https://cv8qdx88-3000.use2.devtunnels.ms/api";
+const API = import.meta.env.VITE_API_URL;
 
 export default function GestionActividades() {
   const [actividades, setActividades] = useState([]);

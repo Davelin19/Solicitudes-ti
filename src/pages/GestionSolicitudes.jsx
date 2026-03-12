@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "../assets/css/gestionSolicitudes.css";
 import ModalVerGestionSolicitud from "../components/ModalVerGestionSolicitud";
 
-const API_BASE = "https://cv8qdx88-3000.use2.devtunnels.ms/api";
+const API_BASE = import.meta.env.VITE_API_URL;
 
 export default function GestionSolicitudes() {
   const [solicitudes, setSolicitudes] = useState([]);

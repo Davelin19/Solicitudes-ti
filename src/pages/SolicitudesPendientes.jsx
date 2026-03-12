@@ -3,7 +3,7 @@ import "../assets/css/solicitudesPendientes.css";
 import ModalAprobar from "../components/ModalAprobar";
 import ModalRechazar from "../components/ModalRechazar";
 
-const API_BASE = "https://cv8qdx88-3000.use2.devtunnels.ms/api";
+const API_BASE = import.meta.env.VITE_API_URL;
 
 const SolicitudesPendientes = () => {
   const [solicitudes, setSolicitudes] = useState([]);
